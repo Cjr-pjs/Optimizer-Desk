@@ -38,7 +38,7 @@ git clone https://github.com/Cjr-pjs/windows-optimizer.git
 2. Acesse a pasta do projeto:
 
 ```bash
-Optimizer-Desk
+cd SEU_REPOSITORIO
 ```
 
 3. Instale as dependências:
