@@ -1,0 +1,26 @@
+{
+  "name": "deskpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "optimizer-ui/src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon .src/index.js",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.3",
+    "electron": "^40.6.1",
+    "electron-builder": "^26.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "empty-trash": "^4.0.0"
+  }
+}

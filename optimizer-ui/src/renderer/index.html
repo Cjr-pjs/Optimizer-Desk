@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">  
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Optimizer Desk</title>
+</head>
+<body>
+    <header>
+        <h1>Windows Optimizer</h1>
+    </header>
+
+    <main class="app-layout">
+        <section class="controls-panel">
+            <button type="button" class="ram" id="ramBtn">Mostrar uso da RAM</button>
+            <button type="button" class="temporaryArchives" id="temporaryArchivesBtn">Limpar arquivos temporarios</button>
+            <p id="statusTemporary" class="status-text"></p>
+            <div id="tempReport" class="report hidden">
+                <p id="tempSummary" class="report-summary"></p>
+                <h3>Arquivos temporarios removidos</h3>
+                <ul id="tempDeletedList" class="report-list"></ul>
+            </div>
+
+            <button type="button" class="cleanTrash" id="cleanTrashBtn">Esvaziar a lixeira</button>
+            <p id="statusTrash" class="status-text"></p>
+            <div id="trashReport" class="report hidden">
+                <p id="trashSummary" class="report-summary"></p>
+                <h3>Arquivos removidos da lixeira</h3>
+                <ul id="trashDeletedList" class="report-list"></ul>
+            </div>
+        </section>
+
+        <aside id="ramPanel" class="ram-panel hidden" aria-live="polite">
+            <div class="ram-header">
+                <h2>Uso de RAM em tempo real</h2>
+                <button type="button" class="secondary-btn" id="hideRamPanelBtn">Ocultar</button>
+            </div>
+            <div class="ram-bar-track">
+                <div id="ramBar" class="ram-bar-fill"></div>
+            </div>
+            <p id="ramPercent" class="ram-highlight">0%</p>
+            <p id="ramUsed">Usada: 0 GB</p>
+            <p id="ramTotal">Total: 0 GB</p>
+
+            <h3>Processos com maior uso de RAM</h3>
+            <ul id="ramProcessList" class="report-list"></ul>
+        </aside>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

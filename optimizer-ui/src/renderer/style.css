@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: 89, 89, 109;
+    --bg-color: 240, 240, 245;
+}
+
+body {
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background: radial-gradient(circle at 20% 20%, rgba(0, 255, 200, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(255, 0, 200, 0.12), transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(0, 150, 255, 0.12), transparent 40%),
+        linear-gradient(135deg, #0f0f1a, #1a1a2e);
+
+    color: rgb(230, 230, 230);
+    min-height: 100vh;
+    padding: 24px;
+}
+
+header {
+    margin-bottom: 24px;
+    color: white;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+     letter-spacing: 0.5px;
+
+    background: linear-gradient(90deg, #00f5d4, #9b5cff);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 12px rgba(155, 92, 255, 0.4);
+
+    text-align: center;
+}
+
+.app-layout {
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.controls-panel {
+    min-width: 320px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+button {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #5b5bff, #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 40px;
+      font-weight: 500;
+    letter-spacing: 0.3px;
+
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(139, 92, 246, 0.7);
+}
+
+.status-text {
+    min-height: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #070707;
+}
+
+.report {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #6b6b6e;
+    color: #fffafa;
+}
+
+.report-summary {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.report h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.report-list {
+    max-height: 180px;
+    overflow-y: auto;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.ram-panel {
+    width: 360px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(49, 43, 43, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.ram-panel h2 {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #686868;
+}
+
+.ram-panel h3 {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.ram-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.secondary-btn {
+    width: auto;
+    height: 36px;
+    padding: 0 14px;
+    margin-top: 0;
+    background: #6b7280;
+    font-size: 14px;
+}
+
+.secondary-btn:hover {
+    background: #acacac;
+}
+
+.ram-bar-track {
+    width: 100%;
+    height: 18px;
+    background: #e9e9ee;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.ram-bar-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #00f5d4, #9b5cff);
+    transition: width 0.25s ease;
+}
+
+.ram-highlight {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .app-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls-panel,
+    .ram-panel {
+        width: 100%;
+        max-width: 500px;
+    }
+}
